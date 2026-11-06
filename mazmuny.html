@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title>ZHANGIR KHAN UNIVERSITY</title>
+    <style>
+        .fig {
+         text-align: center; /* Выравнивание по центру */ 
+        }
+        TD, TH {
+    padding: 5px; /* Поля вокруг текста */
+       }
+
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            background-color: #333;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style-type: none;
+            padding: 0;
+            background-color: #444;
+            z-index: 1;
+        }
+
+        .submenu li {
+            display: block;
+        }
+
+        .submenu a {
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+        }
+
+        .submenu a:hover {
+            background-color: #666;
+        }
+
+        /* Показывать подменю при наведении на родительский элемент */
+        .menu li:hover .submenu {
+            display: block;
+        }
+
+        /* Стили для мобильных устройств */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+            }
+
+            .menu li {
+                width: 100%;
+            }
+
+            .submenu {
+                position: static;
+            }
+
+            .menu li:hover .submenu {
+                display: none; /* Отключаем поведение наведения на мобильных устройствах */
+            }
+
+            .menu li.active .submenu {
+                display: block; /* Показывать подменю, если элемент активен */
+            }
+        }
+        
+.scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .scroll-top:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+        img {
+            max-width: 100%; /* Ограничивает размер изображения */
+            height: auto; /* Сохраняет пропорции */
+        }
+       </style>
+<!--
+Neaty HTML Template
+http://www.templatemo.com/tm-501-neaty
+-->
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css"> 
+    <link rel="stylesheet" href="css/menu_popup.css">                                  <!-- Templatemo style -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                  <div class="tm-blue-bg tm-left-column"> 
+                   
+                        <ul class="menu">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="obuch.html">Об учебнике</a></li>           
+                            <li><a href="authors.html">Авторы</a></li>
+                        </ul>
+                                
+                        <div class="tm-logo-div text-xs-center">
+                            
+                            <a href="index.html">
+                                
+                                <h1 class="tm-site-name">Web-программирование
+                                    на языке PHP
+                                   </h1></a>
+                      
+                                   Жаксыбаев Д.О. <br>
+                                   Кубегенова А.Д. <br>
+                               Мизамова Г.Н.
+                               
+ 
+                        </div>
+
+                       
+                        
+                        
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                            
+                                   
+                                
+                               
+                                <li class="tm-nav-item">
+                                    <a href="mazmuny.html" class="tm-nav-item-link"><ul>
+                                        <li>Введение</li></ul>
+                                        </a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="1.html" class="tm-nav-item-link"><ul>
+                                        <li>1.  Базовые знания о PHP 
+                                             </li></ul></li>
+                                        </a>
+                                </li>
+
+                                <li class="tm-nav-item">
+                                    <a href="2.html" class="tm-nav-item-link"><ul>
+                                        <li>2.  Протоколы и методы </li></ul></a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="3.html" class="tm-nav-item-link"><ul>
+                                        <li>3.  Структура управления данными</li></ul></a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="4.html" class="tm-nav-item-link"><ul>
+                                        <li>4.  Пользовательские функции</li></ul></a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="5.html" class="tm-nav-item-link"><ul>
+                                        <li>5. Хранение данных
+                                             </li></ul></a>
+                                </li>
+                                
+                              
+                               
+                                
+                                <li class="tm-nav-item">
+                                    <a href="literatura.html" class="tm-nav-item-link"><ul>
+                                        <li>Список литературы
+                                             </li></ul></a>
+                                </li>      
+                                            
+                               
+                            </ul>
+                        </nav>   
+                        </div>
+                    </div>                                                   
+                    </div>  <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+                        
+
+                        <div class="tm-content-div">
+                            <!-- Welcome section -->
+                            <section id="welcome" class="tm-section">
+                                <header>
+                                 
+                                </header>
+                            <!-- ####### HEY, I AM THE SOURCE EDITOR! #########-->
+<div>
+    <div style="text-align: center;"><strong>Введение</strong></div>
+    <div style="text-align: center;">&nbsp;</div>
+    </div>
+    <p>PHP&nbsp;(рекурсивный акроним словосочетания&nbsp;PHP: Hypertext Preprocessor) - это распространённый язык программирования общего назначения с открытым исходным кодом. PHP специально сконструирован для веб-разработок и его код может внедряться непосредственно в HTML.</p>
+    <p><strong>Возможности PHP</strong></p>
+    <p>PHP может все. Главная область применения PHP - написание скриптов, работающих на стороне сервера; таким образом, PHP способен выполнять все то, что выполняет любая другая программа CGI, например, обрабатывать данные форм, генерировать динамические страницы или отсылать и принимать cookies. Но PHP способен выполнять намного больше.</p>
+    <p>Существуют три основных области применения PHP.</p>
+    <p>Создание скриптов для выполнения на стороне сервера. PHP традиционно и наиболее широко используется именно таким образом. Для этого вам будут необходимы три вещи. Интерпретатор PHP (в виде программы CGI или серверного модуля), веб-сервер и браузер. Для того чтобы можно было просматривать результаты выполнения PHP-скриптов в браузере, нужен работающий веб-сервер и установленный PHP. Просмотреть вывод PHP-программы можно в браузере, получив PHP-страницу, сгенерированную сервером. В случае, если вы просто экспериментируете, вы вполне можете использовать свой домашний компьютер вместо сервера. За более подробными сведениями обратитесь к главе&nbsp;<a href="https://www.php.net/manual/ru/install.php">Советы по установке</a>.</p>
+    <p>Создание скриптов для выполнения в командной строке. Вы можете создать PHP-скрипт, способный запускаться без сервера или браузера. Все, что вам потребуется - парсер PHP. Такой способ использования PHP идеально подходит для скриптов, которые должны выполняться регулярно, например, с помощью cron (на платформах *nix или Linux) или с помощью планировщика задач (Task Scheduler) на платформах Windows. Эти скрипты также могут быть использованы в задачах простой обработки текстов. За дополнительной информацией обращайтесь к главе&nbsp;<a href="https://www.php.net/manual/ru/features.commandline.php">Использование PHP в среде командной строки</a>.</p>
+    <p>Создание оконных приложений, выполняющихся на стороне клиента. Возможно, PHP является не самым лучшим языком для создания подобных приложений, но, если вы очень хорошо знаете PHP и хотели бы использовать некоторые его возможности в своих клиентских приложениях, вы можете использовать PHP-GTK для создания таких приложений. Подобным образом вы можете создавать и кросс-платформенные приложения. PHP-GTK является модулем PHP и не поставляется вместе с основным дистрибутивом PHP. Если вы заинтересованы, посетите&nbsp;<a href="http://gtk.php.net/">&raquo;&nbsp;сайт PHP-GTK</a>.</p>
+    <p>PHP&nbsp;<a href="https://www.php.net/manual/ru/install.php">доступен</a>&nbsp;для большинства операционных систем, включая Linux, многие модификации Unix (такие как HP-UX, Solaris и OpenBSD), Microsoft Windows, macOS, RISC OS и многие другие. Также в PHP включена поддержка большинства современных веб-серверов, таких как Apache, IIS и многих других. В принципе, подойдёт любой веб-сервер, способный использовать бинарный файл FastCGI PHP, например, lighttpd или nginx. PHP может работать в качестве модуля или функционировать в качестве процессора CGI.</p>
+    <p>Таким образом, выбирая PHP, вы получаете свободу выбора операционной системы и веб-сервера. Более того, у вас появляется выбор между использованием процедурного или объектно-ориентированного программирования (ООП) или же их сочетания.</p>
+    <p>PHP способен генерировать не только HTML. Доступно формирование изображений, файлов PDF и даже роликов Flash (с использованием libswf и Ming), создаваемых &laquo;на лету&raquo;. PHP также способен генерировать любые текстовые данные, такие, как XHTML и другие XML-файлы. PHP может осуществлять автоматическую генерацию таких файлов и сохранять их в файловой системе вашего сервера вместо того, чтобы отдавать клиенту, организуя, таким образом, серверный кеш для вашего динамического контента.</p>
+    <p>Одним из значительных преимуществ PHP является поддержка&nbsp;<a href="https://www.php.net/manual/ru/refs.database.php">широкого круга баз данных</a>. Создать скрипт, использующий базы данных, - невероятно просто. Можно воспользоваться модулем, специфичным для отдельной базы данных (таким как&nbsp;<a href="https://www.php.net/manual/ru/book.mysqli.php">mysql</a>) или использовать уровень абстракции от базы данных, такой как&nbsp;<a href="https://www.php.net/manual/ru/book.pdo.php">PDO</a>, или подсоединиться к любой базе данных, поддерживающей Открытый Стандарт Соединения Баз Данных (ODBC), с помощью одноимённого модуля&nbsp;<a href="https://www.php.net/manual/ru/book.uodbc.php">ODBC</a>. Для других баз данных, таких как CouchDB, можно воспользоваться&nbsp;<a href="https://www.php.net/manual/ru/book.curl.php">cURL</a>&nbsp;или&nbsp;<a href="https://www.php.net/manual/ru/book.sockets.php">сокетами</a>.</p>
+    <p>PHP также поддерживает взаимодействие с другими сервисами через такие протоколы, как LDAP, IMAP, SNMP, NNTP, POP3, HTTP, COM (на платформах Windows) и многих других. Кроме того, вы получаете возможность работать с сетевыми сокетами напрямую. PHP поддерживает стандарт обмена сложными структурами данных WDDX практически между всеми языками веб-программирования. Обращая внимание на взаимодействие между различными языками, следует упомянуть о поддержке объектов Java и возможности их использования в качестве объектов PHP.</p>
+    <p>PHP имеет много возможностей по&nbsp;<a href="https://www.php.net/manual/ru/refs.basic.text.php">обработке текста</a>, включая регулярные выражения Perl (<a href="https://www.php.net/manual/ru/book.pcre.php">PCRE</a>) и много других модулей и инструментов&nbsp;<a href="https://www.php.net/manual/ru/refs.xml.php">для обработки и доступа к XML-документам</a>. В PHP обработка XML-документов стандартизирована и происходит на базе мощной библиотеки&nbsp;<a href="https://www.php.net/manual/ru/book.libxml.php">libxml2</a>, расширив возможности обработки XML добавлением новых модулей&nbsp;<a href="https://www.php.net/manual/ru/book.simplexml.php">SimpleXML</a>,&nbsp;<a href="https://www.php.net/manual/ru/book.xmlreader.php">XMLReader</a>&nbsp;и&nbsp;<a href="https://www.php.net/manual/ru/book.xmlwriter.php">XMLWriter</a>.</p>
+    <p>Есть ещё много других интересных модулей, которые можно просмотреть как в&nbsp;<a href="https://www.php.net/manual/ru/extensions.php">алфавитном порядке</a>, так и&nbsp;<a href="https://www.php.net/manual/ru/funcref.php">по категориям</a>. Есть ещё много дополнительных модулей PECL, которые также могут (а могут и нет) быть документированы в данном руководстве, такие как&nbsp;<a href="http://xdebug.org/">&raquo;&nbsp;XDebug</a>.</p>
+    <p>Как вы видите, этой страницы не хватит для того, чтобы перечислить все, что может предложить вам PHP. Читайте следующую главу,&nbsp;<a href="https://www.php.net/manual/ru/install.php">Установка PHP</a>&nbsp;и обратитесь к главе&nbsp; <a href="https://www.php.net/manual/ru/funcref.php">Справочник по функциям</a>&nbsp;за более подробными сведениями о перечисленных выше модулях.</p>
+                            </section>
+                           
+                            
+                            
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <script>
+            // JavaScript для обработки кликов на мобильных устройствах
+            const menuItems = document.querySelectorAll('.menu li');
+        
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Закрыть другие подменю
+                    menuItems.forEach(i => {
+                        if (i !== item) {
+                            i.classList.remove('active');
+                        }
+                    });
+                    // Переключить класс active для текущего элемента
+                    item.classList.toggle('active');
+                });
+            });
+        </script>    
+        <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+                           
+</body>
+</html>
